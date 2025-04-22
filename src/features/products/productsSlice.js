@@ -21,6 +21,7 @@ export const { setSelectedProduct } = productsSlice.actions;
 
 export default productsSlice.reducer;
 
+// Selectors
 export const selectAllProducts = (state) => state.products.products;
 export const selectProductStatus = (state) => state.products.status;
 export const selectProductError = (state) => state.products.error;
