@@ -1,11 +1,14 @@
-import { Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import ProductDetail from "./pages/ProductDetail";
 
-const App = () => {
+function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <Outlet />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/product/:id" element={<ProductDetail />} />
+    </Routes>
   );
-};
+}
 
 export default App;
